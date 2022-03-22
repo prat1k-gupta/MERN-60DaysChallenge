@@ -1,0 +1,238 @@
+quick notes
+
+//Data types//
+
+string " Hello World!!"
+number "1,2,.."
+boolean true/false 
+
+keywords 
+
+alert("hello world!!");
+typeof(1);
+"number"
+
+typeof("pratik ");
+"string"
+
+typeof(true);
+"boolean
+
+// To Print// 
+console.log("message");
+
+//Alerts//
+alert("message");
+
+// to get input from user//
+prompt("message to display before input ");
+
+//concatinate//
+alert("pratik"+" "+"gupta";
+output : pratik gupta 
+
+//length of a string//
+string.length;
+
+//UPPERCASE & lowercase//
+
+string.toUpperCase();
+string.toLowerCase
+
+//slicing//
+string.slice(0,5);
+input= pratik 
+output= prati
+
+//DOM DOCUMENT OBJECT MODEL //
+
+document.getelementById("id-name");
+//to get the element using id 
+
+//IF ELSE IN JS //
+if(){
+}
+else if(){
+}
+else{
+}
+ 
+//DIFF BETWEEN == AND ===
+
+== is less strict, can't make diff between a number and a string 
+=== is strict enough to make diff between a number and a string 
+
+//ARRAYS IN JS 
+var arr= []; 
+for eg var arr=["pratik", "mehak", "pawan", "manju"]
+
+//to get size of array: arr.length; //4
+
+includes : arr.includes(name) //will return true if the name exist in the array 
+
+arr.push(element) //to push element in an array
+
+arr.pop(element) //remove element from the end 
+
+//LOOPs ARE SAME AS IN C++ 
+
+//DOM
+
+button properties
+- innerHTML 
+- style
+- firstChild
+button methods 
+- click()
+- appendchild()
+//CHANGING COLOR
+- document.getElementById("id_name").style.color = "color"
+
+//SELECTING THE HTML 
+- document.getElementsByTagName("tag_name"); 
+
+
+for li
+document.getElementsByTagName("li"); 
+
+When there is Elements it gives array  
+This gives us array of li tags on the page and we have to choose using [] brackets to select particular item 
+for eg: 
+<li>1</li>
+<li>2</li>
+<li>3</li>
+document.getElementsByTagName("li")[2].style.color="red";
+to change the color of third list item 
+
+- document.getElementByClassName("class_name")
+ 
+-document.getElementById("id_name"); 
+it gives us only one element because we just have Element and not Elements
+
+//QUERY SELECTOR
+It's mixture of all
+best use case to call herarichal selectors
+we can call an element by using:
+- tagname 
+- .class_name (for classes)
+- #id_name (for ids)
+
+//QUERY SELECTOR ALL 
+ to bring array of the elements present in the HTML
+
+
+//TO PLAY WITH CSS AND Add or Remove  classes in a particular element 
+- document.querySelector("button").classList.toggle("invisible");
+
+//DIFF B/W textContent  and innerHTML
+
+innerHtML: 
+It changes the text between html elements which are selected only 
+ 
+for eg: <h1><strong>hello</strong></h1>
+we use 
+document.querySelector("h1").innerHTML="good bye";
+output: 
+error
+<h1><strong>hello</strong></h1>
+
+//but we can use innerHTML to add html between html elements
+for eg document.querySelector("h1").innerHTML = "<em>good bye</em>"; 
+
+textContent: 
+
+just change the text between html elements 
+for eg: <h1><strong>hello</strong></h1>
+we use 
+document.querySelector("h1").innerContent="good bye";
+
+output: 
+<h1><strong>good bye </strong></h1>
+
+//TO MANIPULATE ATTRIBUTES 
+
+ATTRIBUTES; 
+<a href="https://google.com" >google</a>
+
+So href is an attribute
+
+so how to get attribute
+- to get attribute we use getAttribute 
+
+for eg: document.querySelector("a").getAttribute;
+//href
+
+so how to set attribute or change attributes of the element 
+- to set attribute we use setAttribute
+
+for eg: document.querySelector("a").setAttribute("href","https://bing.com"); 
+
+//addEventListener
+
+so till now we have studied about the click event only so how to use click methon
+ 
+for eg
+html:
+ <button></button>
+
+js: 
+document.querySelector("button").addEventListener("click",function (){
+	console.log("button was clicked"); 
+}); 
+
+//so this will print the "button was clicked" whenever the button is clicked 
+
+how can we know which event we are currently listening to 
+we us "this" to get the event that we are listening to 
+
+for eg: 
+html:
+ <button></button>
+ <button></button>
+ <button></button>
+
+js: 
+let i=0; 
+let numButtons = document.querySelectorAll("button").length; //3
+for(i=0; i<numButtons; i++){
+	document.querySelectorAll("button")[i].addEventListener("click",function (){
+		console.log("button was clicked"); 
+	}); 	
+}
+// now we added a event listener to all the buttons
+
+//so whenever any button is clicked we get the "button was clicked message in the console"
+
+now how can we know which button is clicked and which button we are listening to 
+so we can use "this" for this task 
+
+js: 
+
+let i=0; 
+let numButtons = document.querySelectorAll("button").length; //3
+for(i=0; i<numButtons; i++){
+	document.querySelectorAll("button")[i].addEventListener("click",function (){
+		console.log(this); 
+	}); 	
+}
+//output
+//this wil console the button you have clicked like 
+<button></button>
+
+//CONSTRUCTOR AND OBJECTS
+
+//this is how we create a constructor in js 
+//first word of the function should be in capital letter 
+function BellBoy(name,yearOfExp,workPermit){
+	this.n = name; 
+	this.y = yearOfExp;
+	this.w = workPermit; 
+}
+
+//to call a constructor 
+var bellboy1 = new BellBoy("kunnu", 12, true); 
+
+ so the object is created and now we cann call any property using 
+ bellboy1.name; 
+ //output "kunnu"
+ 
