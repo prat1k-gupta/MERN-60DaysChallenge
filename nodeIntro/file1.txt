@@ -1,0 +1,1 @@
+i am gonna create a copy of this file with name file2.txt using node native modules 
