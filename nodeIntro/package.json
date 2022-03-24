@@ -1,5 +1,15 @@
 {
+  "name": "nodeintro",
+  "version": "1.0.0",
+  "description": "simple package for new beginning",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "pratik gupta",
+  "license": "ISC",
   "dependencies": {
-    "jshint": "^2.13.4"
+    "jshint": "^2.13.4",
+    "supervillains": "^3.0.0"
   }
 }
