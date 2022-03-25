@@ -1,0 +1,24 @@
+Express is a nodejs framework 
+ 
+Install Express
+- we have to make a root folder 
+- we have to make a file_name.js file and initialize npm init in the root folder to make package.json file 
+- then Install it using npm install Express
+
+Then to use express we have to  
+go to the file_name.js
+
+write 
+const express = require("express");
+const app  = express();
+app.listen(3000,function(){
+    console.log("server started")
+});
+
+//So now the server got started and now we have to make requests to server 
+
+for that we need to use get 
+
+app.get("/",function(reqest,response){
+    response("hello");
+})
